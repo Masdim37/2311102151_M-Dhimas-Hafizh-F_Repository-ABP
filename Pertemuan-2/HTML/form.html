@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Praktikan</title>
+</head>
+
+<body>
+    <center>
+        <h2>Formulir Pendaftaran Praktikan</h2>
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td><label for="nama_id"><b>Nama:</b></label></td>
+                    <td>:</td>
+                    <td><input type="text" name="nama_input" id="nama_id" placeholder="Input Nama" value="Praktikan" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="uname_id"><b>Username:</b></label></td>
+                    <td>:</td>
+                    <td><input type="text" name="uname_input" id="uname_id" placeholder="Input Username"
+                            value="Praktikum" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="password_id"><b>Password:</b></label></td>
+                    <td>:</td>
+                    <td><input type="password" name="password_input" id="password_id" placeholder="Input Password"></td>
+                </tr>
+                <tr>
+                    <td><label for="email_id"><b>Email:</b></label></td>
+                    <td>:</td>
+                    <td><input type="email" name="email_input" id="email_id" placeholder="Input Email"></td>
+                </tr>
+                <tr>
+                    <td><b>Jenis Kelamin:</b></td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" name="jk_input" id="pria" value="Pria">
+                        <label for="pria">Pria</label>
+                        <input type="radio" name="jk_input" id="wanita" value="Wanita">
+                        <label for="wanita">Wanita</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Hobi:</b></td>
+                    <td>:</td>
+                    <td>
+                        <input type="checkbox" name="hobi_input" id="renang" value="Renang">
+                        <label for="renang">Renang</label><br>
+                        <input type="checkbox" name="hobi_input" id="bersepeda" value="Bersepeda">
+                        <label for="bersepeda">Bersepeda</label><br>
+                        <input type="checkbox" name="hobi_input" id="memancing" value="Memancing">
+                        <label for="memancing">Memancing</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="jp_id"><b>Jenjang Pendidikan:</b></label></td>
+                    <td>:</td>
+                    <td>
+                        <select name="jp_input" id="jp_id">
+                            <option value="" selected>------Pilih------</option>
+                            <option value="D3">Tamat D3</option>
+                            <option value="S1">Tamat S1</option>
+                            <option value="S2">Tamat S2</option>
+                            <option value="S3">Tamat S3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="kritik_saran"><b>Kritik & Saran:</b></label></td>
+                    <td>:</td>
+                    <td><textarea id="kritik_saran" name="kritik_saran" rows="5" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right">
+                        <input type="button" value="Cancel" class="btn-cancel">
+                        <input type="submit" value="Submit" class="btn-submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
