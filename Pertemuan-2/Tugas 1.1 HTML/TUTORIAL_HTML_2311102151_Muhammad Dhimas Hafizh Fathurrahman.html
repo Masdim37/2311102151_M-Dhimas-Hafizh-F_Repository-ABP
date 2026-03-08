@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2311102151 Muhammad Dhimas Hafizh Fathurrahman Tugas 1.1 HTML</title>
+</head>
+
+<body>
+    <center>
+        <h2>DATA MAHASISWA</h2>
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td><label for="nim_id">NIM : </label></td>
+                    <td><input type="text" name="nim_input" id="nim_id"></td>
+                </tr>
+                <tr>
+                    <td><label for="nama_id">Nama : </label></td>
+                    <td><input type="text" name="nama_input" id="nama_id"></td>
+                </tr>
+                <tr>
+                    <td><label for="tgllahir_id">Tanggal Lahir (DD-MM-YYYY) : </label></td>
+                    <td><input type="date" name="tgllahir_input" id="tgllahir_id"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin : </td>
+                    <td>
+                        <input type="radio" name="jk_input" id="laki-laki" value="Laki-Laki">
+                        <label for="laki-laki">Laki-Laki</label>
+                        <input type="radio" name="jk_input" id="perempuan" value="Perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="alamat_id">Alamat di Purwokerto : </label></td>
+                    <td><textarea id="alamat_id" name="alamat_id" rows="5" cols="30"></textarea></td>
+                </tr>
+               <tr>
+                    <td><label for="tinggal_id">Tinggal di : </label></td>
+                    <td>
+                        <select name="tinggal_input" id="tinggal_id">
+                            <option value="" selected>---Pilih---</option>
+                            <option value="Kos">Kos/Kontrakan</option>
+                            <option value="Rumah_Saudara">Rumah Saudara</option>
+                            <option value="Rumah_Ortu">Rumah Orang Tua</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilih 2 Hobi yang Paling Disukai : </td>
+                    <td>
+                        <input type="checkbox" name="hobi_input" id="science" value="Science">
+                        <label for="science">Science</label><br>
+                        <input type="checkbox" name="hobi_input" id="technology" value="Technology">
+                        <label for="technology">Technology</label><br>
+                        <input type="checkbox" name="hobi_input" id="art" value="Art">
+                        <label for="art">Art</label><br>
+                        <input type="checkbox" name="hobi_input" id="sport" value="Sport">
+                        <label for="sport">Sport</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="left">
+                        <input type="submit" value="Submit" class="btn-submit">
+                        <input type="reset" value="Reset" class="btn-reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
