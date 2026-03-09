@@ -1,0 +1,39 @@
+body {
+    background: #eee;
+    align-content: center;
+}
+
+.box {
+    border: 3px solid #aaa;
+    padding: 20px;
+    background: white;
+}
+
+.nav-box {
+    border: 1px solid #aaa;
+    text-align: center;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.line {
+    border-top: 5px solid black;
+    margin: 40px 0;
+}
+
+.sidebar-btn {
+    background: #888;
+    height: 35px;
+    margin-bottom: 70px;
+}
+
+.content-box {
+    border: 1px solid #aaa;
+}
+
+.content-row {
+    border-bottom: 1px solid #aaa;
+    height: 35px;
+    text-align: center;
+}
