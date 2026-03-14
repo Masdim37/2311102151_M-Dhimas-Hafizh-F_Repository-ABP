@@ -1,0 +1,77 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 40px;
+    background: white;
+    border-radius: 30px;
+    border: #0A0A0A;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #0A0A0A;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 3px;
+}
+
+.action-btn {
+    text-align: right;
+}
+
+.btn-submit,
+.btn-cancel {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #a71d2a;
+}

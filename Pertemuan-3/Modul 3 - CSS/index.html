@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2311102151 Muhammad Dhimas Hafizh Fathurrahman Tugas Minggu 3 No 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h2>Formulir Pendaftaran Praktikan</h2>
+            <form action="#" method="POST">
+                <table>
+                    <tr>
+                        <td><label for="nama_id">Nama : </label></td>
+                        <td><input type="text" name="nama_input" id="nama_id" placeholder="Input Nama"
+                                value="Muhammad Dhimas Hafizh Fathurrahman" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nim_id">NIM : </label></td>
+                        <td><input type="text" name="nim_input" id="nim_id" placeholder="NIM Input" value="2311102151"
+                                readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="usn_id">Username : </label></td>
+                        <td><input type="text" name="usn_input" id="usn_id" placeholder="Username Input"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw_id">Password : </label></td>
+                        <td><input type="password" name="psw_input" id="psw_id" placeholder="Password Input"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email_id">Email : </label></td>
+                        <td><input type="email" name="email_input" id="email_id" placeholder="Email Input"></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin : </td>
+                        <td>
+                            <input type="radio" name="jk_input" id="laki-laki" value="Laki-Laki">
+                            <label for="laki-laki">Laki-Laki</label>
+                            <input type="radio" name="jk_input" id="perempuan" value="Perempuan">
+                            <label for="perempuan">Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hobi : </td>
+                        <td>
+                            <input type="checkbox" name="hobi_input" id="renang" value="Renang">
+                            <label for="renang">Renang</label><br>
+                            <input type="checkbox" name="hobi_input" id="bersepeda" value="Bersepeda">
+                            <label for="bersepeda">Bersepeda</label><br>
+                            <input type="checkbox" name="hobi_input" id="memancing" value="Memancing">
+                            <label for="memancing">Memancing</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pendidikan_id">Jenjang Pendidikan : </label></td>
+                        <td>
+                            <select name="pendidikan_input" id="pendidikan_id">
+                                <option value="" selected>-----Pilih-----</option>
+                                <option value="D3">Tamat D3</option>
+                                <option value="S1">Tamat S1</option>
+                                <option value="S2">Tamat S2</option>
+                                <option value="S3">Tamat S3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="kritiksaran_id">Kritik & Saran : </label></td>
+                        <td><textarea id="kritiksaran_id" name="kritiksaran_id" rows="5" cols="30"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="action-btn" align="right">
+                            <input type="button" value="Cancel" class="btn-cancel">
+                            <input type="submit" value="Submit" class="btn-submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
