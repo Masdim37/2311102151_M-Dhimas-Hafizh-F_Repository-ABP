@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Laprak Pertemuan 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(asset/bgramadan.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-box {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 25px;
+            width: 1000px;
+            max-width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .btn-thr {
+            font-size: 18px;
+            padding: 12px 30px;
+            transition: 0.3s;
+        }
+
+        .btn-thr:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px gold;
+        }
+
+        .card-thr {
+            display: none;
+            margin-top: 25px;
+            animation: popUp 0.5s ease;
+            border-radius: 20px;
+            padding: 20px;
+            width: 500px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-thr h3 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .card-thr p {
+            font-size: 18px;
+        }
+
+        #jumlahTHR {
+            font-size: 32px;
+            font-weight: bold;
+            color: green;
+        }
+
+        @keyframes popUp {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        h5 {
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="content-box">
+            <h5>✨ HARI RAYA IDUL FITRI 1447 H ✨</h5>
+            <h1 class="mb-3">🌙 Selamat Hari Raya Idul Fitri 🌙</h1>
+            <h4 class="mb-4">Mohon Maaf Lahir dan Batin 🙏</h4>
+
+            <button id="thr" class="btn btn-warning btn-thr" onclick="ambilTHR()">
+                🎁 Ambil THR
+            </button>
+
+            <div class="card card-thr text-dark" id="thrCard">
+                <div class="card-body">
+                    <h3 style="font-weight: bold; font-size: 30px;">🎉 SELAMAT! 🎉</h3>
+                    <p style="font-size: 20px;">Anda mendapatkan THR sebesar :</p>
+                    <h2 id="jumlahTHR">Rp 0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ambilTHR() {
+            let thr = Math.floor(Math.random() * 1000000) + 50000;
+
+            document.getElementById("jumlahTHR").innerText =
+                "Rp " + thr.toLocaleString("id-ID");
+
+            document.getElementById("thrCard").style.display = "block";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
