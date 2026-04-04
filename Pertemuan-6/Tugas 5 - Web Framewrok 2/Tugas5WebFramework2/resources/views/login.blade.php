@@ -35,6 +35,12 @@
                 <a href="{{ route('registration') }}" class="ms-3">Belum punya akun? Register</a>
             </div>
 
+            @if ($errors->any())
+            <div class="alert text-center mt-3">
+                {{ $errors->first() }}
+            </div>
+            @endif
+
         </form>
 
     </div>

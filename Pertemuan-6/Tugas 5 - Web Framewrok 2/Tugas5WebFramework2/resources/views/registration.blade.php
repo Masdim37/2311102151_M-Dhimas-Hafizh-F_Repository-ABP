@@ -42,6 +42,21 @@
                 <a href="{{ route('login') }}" class="ms-3">Sudah punya akun? Login</a>
             </div>
 
+            @if (session('success'))
+                <div class="alert text-center mt-3">
+                    {{ session('success') }}
+                </div>
+            @endif
+            @if ($errors->any())
+                <div class="alert text-center mt-3">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
         </form>
 
     </div>
