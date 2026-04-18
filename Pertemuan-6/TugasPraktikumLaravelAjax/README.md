@@ -2,7 +2,7 @@
   <br />
   <h1>LAPORAN PRAKTIKUM<br>APLIKASI BERBASIS PLATFORM</h1>
   <br />
-  <h3>MODUL ...<br>LARAVEL & AJAX</h3>
+  <h3>MODUL 10 - 13 (PERTEMUAN 6)<br>LARAVEL & AJAX</h3>
   <br />
   <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_Telkom_University_potrait.png" alt="Logo" width="300"> 
   <br />
@@ -57,7 +57,7 @@ JSON (JavaScript Object Notation) adalah format serialisasi dan pertukaran data 
 
 ## 2. Stuktur Folder
 ```
-TugasParktikumLaravelAjx/   
+TugasParktikumLaravelAjax/   
 │
 ├── app/                    
 |   ├── Http/               
