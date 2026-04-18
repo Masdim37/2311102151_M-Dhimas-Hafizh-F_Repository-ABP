@@ -268,13 +268,13 @@ Penjelasan Singkat :
 Berikut merupakan cara kerja aplikasi :
 
 1. Jalankan aplikasi dengan mengetik command php artisan serve pada terminal.
-![Run Program](https://github.com/Masdim37/Coding-On-The-Spot_ABP/blob/main/Assets/halamanHome.png)
+![Run Program](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-6/ScreenshotOutputTugasPraktikumLaravelAjax/run-program.png)
 
 2. Buka http://127.0.0.1:8000 pada browser, kemudian akan ditampilkan halaman awal yang berisi judul dan tombol Tampilkan Data.
-![Tampilan Awal](https://github.com/Masdim37/Coding-On-The-Spot_ABP/blob/main/Assets/halamanHome.png)
+![Tampilan Awal](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-6/ScreenshotOutputTugasPraktikumLaravelAjax/tampilan-awal.png)
 
 3. Tekan tombol Tampilkan Data, kemudian aplikasi akan mengirimkan request AJAX menggunakan Fetch API ke endpoint /mahasiswa. Selama proses berlangsung, akan ditampilkan indikator loading berupa teks “Mengambil data...”.
-![Mengambil Data](https://github.com/Masdim37/Coding-On-The-Spot_ABP/blob/main/Assets/halamanHome.png)
+![Mengambil Data](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-6/ScreenshotOutputTugasPraktikumLaravelAjax/mengambil-data.png)
 
 4. Data ditampilkan dalam bentuk card Bootstrap yang disusun secara dinamis di dalam halaman, di mana setiap card berisi informasi mahasiswa seperti nama, NIM, kelas, dan program studi tanpa perlu melakukan reload halaman.
-![Data Ditampilkan](https://github.com/Masdim37/Coding-On-The-Spot_ABP/blob/main/Assets/halamanHome.png)
+![Data Ditampilkan](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-6/ScreenshotOutputTugasPraktikumLaravelAjax/data-ditampilkan.png)
