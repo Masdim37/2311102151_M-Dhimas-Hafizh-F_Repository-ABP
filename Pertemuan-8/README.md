@@ -42,26 +42,47 @@ Git adalah salah satu sistem pengontrol versi (Version Control System / VCS) yan
 <br>Berikut langkah-langkah instalasi Git
 
 1. Download Git pada https://git-scm.com/install/windows
+
 ![Download Git](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/1.png)
+
 2. Klik 2x pada file .exe yang didownload, klik next
+
 ![Buka Git](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/2.png)
+
 3. Pilih lokasi instalasi, klik next
+
 ![Pilih lokasi instalasi](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/3.png)
+
 4. Pilih komponen yang ingin di install, klik next
+
 ![Pilih komponen instalasi](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/4.png)
+
 5. Select start menu folder, klik next
+
 ![start menu folder](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/5.png)
+
 6. Pilih editor yang akan digunakan secara default oleh git (saya memilih menggunakan nano), klik next
+
 ![pilih editor](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/6.png)
+
 7. Pilih let git decide, klik next
+
 ![let git decide](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/7.png)
+
 8. Pilih git from the command line and also from 3rd-party software, klik next
+
 ![git from the command line](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/8.png)
+
 9. Untuk opsi selanjutnya lakukan secara default
+
 ![default step](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/9.png)
+
 10. Tunggu hingga proses instalasi selesai
+
 ![tunggu instalasi selesai](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/10.png)
+
 11. Buka git bash kemudian cek versi git menggunakan command git --version, kemudian lakukan konfigurasi username (menggunakan command git config --global user.name “username”) dan email (menggunakan command git config --global user.email email@contoh.com). Kemudian cek konfigurasi yang dilakukan apakah sudah benar atau belum menggunakan command git config --list.
+
 ![tunggu instalasi selesai](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/11.png)
 
 ### Instalasi JDK
@@ -73,15 +94,21 @@ JDK (Java Development Kit) adalah paket perangkat lunak yang digunakan untuk men
 - JVM (Java Virtual Machine): mesin virtual yang mengeksekusi bytecode
 - Tools tambahan seperti debugger dan utility lainnya
 
-<br>Alur kerjanya: kode Java yang ditulis developer akan dikompilasi oleh JDK menjadi bytecode, kemudian bytecode tersebut dijalankan oleh JVM yang terdapat di dalam JRE. Hal ini memungkinkan program Java bersifat platform independent (write once, run anywhere). JDK dikembangkan oleh Oracle Corporation dan menjadi komponen utama dalam proses development aplikasi Java, karena tanpa JDK, developer tidak dapat melakukan kompilasi maupun build program Java.
+Alur kerjanya: kode Java yang ditulis developer akan dikompilasi oleh JDK menjadi bytecode, kemudian bytecode tersebut dijalankan oleh JVM yang terdapat di dalam JRE. Hal ini memungkinkan program Java bersifat platform independent (write once, run anywhere). JDK dikembangkan oleh Oracle Corporation dan menjadi komponen utama dalam proses development aplikasi Java, karena tanpa JDK, developer tidak dapat melakukan kompilasi maupun build program Java.
 <br>Berikut langkah-langkah instalasi JDK:
 
 1. Download JDK Installer melalui https://www.oracle.com/java/technologies/downloads/
+
 2. Lakukan instalasi dengan default step (karena saya sudah pernah menginstall JDK sebelumnya pada mata kuliah Pemrograman Berorientasi Objek, maka saya tidak mengintall ulang lagi)
+
 3. Tambahkan pengaturan path environment variable JDK
+
 ![pengaturan environment variable JDK 1](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/12.png)
+
 ![pengaturan environment variable JDK 2](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/13.png)
+
 4. Cek versi jdk yang sudah diinstal pada CMD
+
 ![cek versi JDK pada cmd](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/14.png)
 
 ### Instalasi Flutter SDK
@@ -93,45 +120,57 @@ Flutter SDK adalah paket perangkat lunak yang digunakan untuk mengembangkan apli
 - Dart SDK: compiler dan tools untuk menjalankan kode Dart
 - Tools (CLI): seperti flutter run, flutter build, dan flutter doctor
 
-<br>Alur kerjanya: developer menulis kode menggunakan Dart, kemudian Flutter SDK akan mengompilasi kode tersebut (AOT/JIT) menjadi aplikasi native yang dapat dijalankan di berbagai platform.
+Alur kerjanya: developer menulis kode menggunakan Dart, kemudian Flutter SDK akan mengompilasi kode tersebut (AOT/JIT) menjadi aplikasi native yang dapat dijalankan di berbagai platform.
 <br>Keunggulan Flutter SDK antara lain:
 
 - Cross-platform: satu kode untuk Android, iOS, web, dan desktop
 - Hot reload: perubahan kode bisa langsung terlihat tanpa restart aplikasi
 - UI fleksibel: menggunakan widget yang dapat dikustomisasi penuh
 
-<br>Secara keseluruhan, Flutter SDK memudahkan pengembangan aplikasi modern dengan proses yang cepat, efisien, dan konsisten di berbagai platform.
+Secara keseluruhan, Flutter SDK memudahkan pengembangan aplikasi modern dengan proses yang cepat, efisien, dan konsisten di berbagai platform.
 <br>Berikut langkah-langkah instalasi Flutter SDK:
 
 1. Download Flutter SDK secara manual pada link berikut https://docs.flutter.dev/install/manual
+
 2. Ekstrak berkas zip dan tempatkan folder flutter pada lokasi instalasi yang diinginkan untuk Flutter SDK, misalnya C:\Users\ASUS\develop\flutter.
+
 ![Ekstrak zip flutter SDK](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/15.png)
+
 3. Tambahkan pengaturan path environment variable flutter
+
 ![path environment variable flutter](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/16.png)
+
 4. Jalankan Flutter Doctor.
 Flutter doctor merupaka perintah untuk mengecek kelengkapan framework flutter yang akan digunakan, seperti versi, Android SDK yang digunakan, iOS SDK yang digunakan (tersedia di MacOS), perangkat yang terhubung, dan lain-lain. Perintah "flutter doctor" memeriksa environment dan menampilkan laporan ke jendela terminal. Pada Flutter SDK sudah terdapat Dart SDK, jadi Anda tidak perlu menginstal Dart secara terpisah. Periksa output dengan cermat untuk perangkat lunak lain yang mungkin perlu Anda instal atau
 melakukan sesuatu lebih lanjut (ditunjukkan dalam teks tebal).
+
 ![flutter doctor](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/17.png)
 
 ### Instalasi Android Studio
 Android Studio adalah perangkat lunak (IDE) resmi yang digunakan untuk mengembangkan aplikasi Android. Dikembangkan oleh Google, Android Studio menyediakan berbagai tools terintegrasi yang memudahkan developer dalam menulis kode, mendesain antarmuka, menjalankan, hingga melakukan debugging aplikasi. Di dalamnya terdapat komponen penting seperti code editor, Android SDK, emulator, serta build tools berbasis Gradle yang digunakan untuk proses build dan manajemen dependensi. Alur kerjanya dimulai dari penulisan kode (menggunakan Java atau Kotlin), kemudian aplikasi di-build dan dijalankan melalui emulator atau perangkat Android secara langsung. Dengan fitur yang lengkap dan terintegrasi, Android Studio menjadi solusi utama dalam pengembangan aplikasi Android karena mampu meningkatkan efisiensi dan produktivitas developer dalam satu lingkungan kerja.
+
 ![android studio](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/18.png)
 
 ### Instalasi SDK Android
 Android SDK (Software Development Kit) adalah kumpulan alat, library, dan komponen yang digunakan untuk mengembangkan aplikasi berbasis Android. SDK ini menyediakan berbagai kebutuhan penting seperti API, emulator, serta tools build yang memungkinkan developer membuat, menguji, dan menjalankan aplikasi Android secara efisien. Android SDK merupakan bagian utama dalam proses development yang biasanya terintegrasi dengan Android Studio dan dikembangkan oleh Google. Di dalamnya terdapat komponen seperti platform Android (API level), build tools, serta debugging tools yang membantu dalam proses pengembangan hingga deployment aplikasi. Dengan adanya Android SDK, developer dapat memastikan aplikasi yang dibuat kompatibel dengan berbagai versi sistem operasi Android serta perangkat yang berbeda-beda.
 Android SDK dapat didownload di Android Studio pada menu settings - Languages & Framework - Android SDK
+
 ![android SDK](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/19.png)
 
 ### Instalasi Visual Studio Code
 Visual Studio Code adalah perangkat lunak editor kode sumber (code editor) yang ringan namun kuat untuk pengembangan berbagai jenis aplikasi. Dikembangkan oleh Microsoft, Visual Studio Code mendukung banyak bahasa pemrograman seperti Java, Python, JavaScript, dan Dart, serta dapat digunakan untuk pengembangan web, mobile, hingga backend. Editor ini dilengkapi dengan fitur penting seperti IntelliSense (auto-completion), debugging, terminal terintegrasi, serta dukungan ekstensi yang sangat luas untuk menambah fungsionalitas sesuai kebutuhan. Dengan bantuan ekstensi, Visual Studio Code dapat diintegrasikan dengan berbagai framework dan tools seperti Flutter, Git, dan Docker. Karena sifatnya yang ringan, fleksibel, dan mudah dikustomisasi, Visual Studio Code menjadi salah satu editor paling populer yang digunakan oleh developer untuk meningkatkan produktivitas dalam proses coding.
+
 ![VSCode](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/20.png)
 
 ### Instalasi Extension Visual Studio Code
 Beberapa extension sangat diperlukan untuk diinstall yang nantinya dipakai sebagai pendukung ketika membuat aplikasi menggunakan Flutter. Berikut extension yang perlu diinstal:
 
 1. Dart
+
 ![Extension Dart](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/21.png)
+
 2. Flutter
+
 ![Extension Flutter](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/22.png)
 
 ## MODUL 2 - PENGENALAN FLUTTER 
@@ -153,7 +192,7 @@ Selain konsep dasar, Flutter juga memiliki pendekatan arsitektur untuk mengelola
 - Scalability: mudah dikembangkan untuk aplikasi besar
 - Testability: logika bisnis mudah diuji secara terpisah dari UI
 
-<br>Dengan arsitektur ini, pengembangan aplikasi Flutter menjadi lebih rapi, modular, dan mudah dikelola, terutama ketika aplikasi semakin kompleks.
+Dengan arsitektur ini, pengembangan aplikasi Flutter menjadi lebih rapi, modular, dan mudah dikelola, terutama ketika aplikasi semakin kompleks.
 
 ![BLoC](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/24.jpg)
 
@@ -212,6 +251,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 Output :
+
 ![Output Hello World](https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/blob/master/Pertemuan-8/AssetScreenshot/25.jpeg)
 
 ## MODUL 3 - PENGENALAN DART
