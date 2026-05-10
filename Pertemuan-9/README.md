@@ -29,21 +29,23 @@
 ---
 
 ## LINK GIT
-<a href="https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/tree/master/Pertemuan-8">
-    https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/tree/master/Pertemuan-8 
+<a href="https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/tree/master/Pertemuan-9">
+    https://github.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/tree/master/Pertemuan-9 
 </a>
+
+---
 
 ## TUGAS PERTEMUAN 9 MOBILE
 📝 Tugas Praktikum Modul 4-5 Flutter
 
 Buat 1 project Flutter yang menampilkan beberapa widget UI berikut:
-🔹 Yang harus ada:
-Container → kotak berwarna
-GridView → minimal 6 item (grid)
-ListView → 3 item (A, B, C)
-ListView.builder → list dari data array
-ListView.separated → list + garis pembatas
-Stack → tampilan bertumpuk (kotak / text)
+<br>🔹 Yang harus ada:
+<br>Container → kotak berwarna
+<br>GridView → minimal 6 item (grid)
+<br>ListView → 3 item (A, B, C)
+<br>ListView.builder → list dari data array
+<br>ListView.separated → list + garis pembatas
+<br>Stack → tampilan bertumpuk (kotak / text)
 
 📦 Output yang dikumpulkan: Screenshot hasilnya Source code Penjelasan singkat tiap widget
 
@@ -383,11 +385,11 @@ class CustomTile extends StatelessWidget {
 ```
 
 ### Screenshot Output 
-![Screenshot Output 1](https://raw.githubusercontent.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/master/Pertemuan-9/ScreenshotOutput/1.png)
+![Screenshot Output 1](https://raw.githubusercontent.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/master/Pertemuan-9/ScreenshotOutput/1.jpg)
 
-![Screenshot Output 2](https://raw.githubusercontent.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/master/Pertemuan-9/ScreenshotOutput/2.png)
+![Screenshot Output 2](https://raw.githubusercontent.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/master/Pertemuan-9/ScreenshotOutput/2.jpg)
 
-![Screenshot Output 3](https://raw.githubusercontent.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/master/Pertemuan-9/ScreenshotOutput/3.png)
+![Screenshot Output 3](https://raw.githubusercontent.com/Masdim37/2311102151_M-Dhimas-Hafizh-F_Repository-ABP/master/Pertemuan-9/ScreenshotOutput/3.jpg)
 
 ### Penjelasan Setiap Widget
 
