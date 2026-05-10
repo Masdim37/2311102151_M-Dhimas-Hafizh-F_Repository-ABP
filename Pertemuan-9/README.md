@@ -517,7 +517,7 @@ Berikut penjelasan Widget ListView.separated yang digunakan pada main.dart :
     color: Colors.indigoAccent,
   )
   ```
-<br>sehingga setiap item dipisahkan menggunakan garis horizontal berwarna biru aksen (Colors.indigoAccent) dengan ketebalan 1.2 pixel. Dengan adanya separator otomatis, tampilan list menjadi lebih rapi dan mudah dibaca tanpa perlu menambahkan divider secara manual pada setiap item.
+sehingga setiap item dipisahkan menggunakan garis horizontal berwarna biru aksen (Colors.indigoAccent) dengan ketebalan 1.2 pixel. Dengan adanya separator otomatis, tampilan list menjadi lebih rapi dan mudah dibaca tanpa perlu menambahkan divider secara manual pada setiap item.
 
 4. Pembuatan Item Secara Dinamis (itemBuilder)
 <br>Sama seperti ListView.builder, bagian itemBuilder digunakan untuk membangun item list secara otomatis berdasarkan index data. Flutter akan melakukan looping sesuai jumlah itemCount. Pada setiap perulangan, data layanan diambil dari layananIT[index]
@@ -551,7 +551,7 @@ Berikut penjelasan Widget stack yang digunakan pada main.dart :
     left: 25,
   )
   ```
-<br>sehingga kotak ditempatkan sejauh 25 pixel dari atas dan kiri container. Di dalamnya terdapat Container berukuran width: 110, height: 110. Warna kotak menggunakan Colors.indigo dengan sudut melengkung (BorderRadius.circular(22)). Pada bagian tengah kotak terdapat ikon Icons.settings_suggest berwarna putih dengan ukuran 50. Kotak ini berfungsi sebagai elemen visual utama pada banner.
+sehingga kotak ditempatkan sejauh 25 pixel dari atas dan kiri container. Di dalamnya terdapat Container berukuran width: 110, height: 110. Warna kotak menggunakan Colors.indigo dengan sudut melengkung (BorderRadius.circular(22)). Pada bagian tengah kotak terdapat ikon Icons.settings_suggest berwarna putih dengan ukuran 50. Kotak ini berfungsi sebagai elemen visual utama pada banner.
 
 4. Layer Kedua (Kotak Overlay)
 <br>Widget kedua juga menggunakan Positioned, namun dengan posisi berbeda top: 55, left: 95. Posisi ini membuat kotak kedua sedikit bergeser ke kanan bawah sehingga menumpuk sebagian area kotak pertama. Efek overlap inilah yang menjadi ciri utama penggunaan Stack. Kotak kedua memiliki ukuran 110 x 110, warna Colors.lightBlueAccent, sudut melengkung radius 22, serta ikon Icons.speed berwarna putih dengan ukuran 48. Kombinasi warna dan posisi bertumpuk membuat tampilan banner terlihat lebih modern dan interaktif.
@@ -564,4 +564,4 @@ Berikut penjelasan Widget stack yang digunakan pada main.dart :
     right: 24,
   )
   ```
-<br>sehingga teks ditempatkan di area kanan bawah banner. Teks yang ditampilkan adalah 'Fast & Reliable'. Teks dibuat lebih menonjol menggunakan fontSize: 26, fontWeight: FontWeight.bold. Warna teks menggunakan Colors.indigo agar tetap selaras dengan tema warna banner.
+sehingga teks ditempatkan di area kanan bawah banner. Teks yang ditampilkan adalah 'Fast & Reliable'. Teks dibuat lebih menonjol menggunakan fontSize: 26, fontWeight: FontWeight.bold. Warna teks menggunakan Colors.indigo agar tetap selaras dengan tema warna banner.
