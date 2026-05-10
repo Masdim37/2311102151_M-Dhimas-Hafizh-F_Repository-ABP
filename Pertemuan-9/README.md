@@ -399,22 +399,28 @@ Container merupakan widget dasar pada Flutter yang berfungsi sebagai wadah atau 
 Berikut penjelasan Widget Container yang digunakan pada main.dart : 
 
 1. Dimensi Container
-Container memiliki tinggi (height) sebesar 180 pixel dan lebar (width) menggunakan double.infinity, sehingga lebar container akan menyesuaikan dan memenuhi area layar yang tersedia secara horizontal.
+<br>Container memiliki tinggi (height) sebesar 180 pixel dan lebar (width) menggunakan double.infinity, sehingga lebar container akan menyesuaikan dan memenuhi area layar yang tersedia secara horizontal.
+
 2. Dekorasi Container (decoration: BoxDecoration)
-Tampilan visual container diatur menggunakan BoxDecoration, yang terdiri dari beberapa elemen berikut:
-- Gradasi Warna (LinearGradient); Background container menggunakan efek gradasi warna melalui LinearGradient, yaitu perpaduan warna dari biru tua (Colors.indigo) menuju biru muda (Colors.lightBlue). Efek ini membuat tampilan container terlihat lebih modern dan tidak monoton.
-- Sudut Melengkung (borderRadius); Properti borderRadius: BorderRadius.circular(24) digunakan untuk membuat sudut container menjadi melengkung dengan radius sebesar 24 pixel. Hal ini memberikan kesan lebih halus dan elegan dibandingkan sudut kotak biasa.
-- Efek Bayangan (boxShadow); Container juga diberikan efek bayangan menggunakan BoxShadow. Bayangan berwarna Colors.indigo dengan tingkat blur (blurRadius) sebesar 12 dan posisi bayangan sedikit bergeser ke bawah menggunakan offset: Offset(0, 6). Efek ini membuat container terlihat lebih hidup dan memiliki dimensi seperti kartu (card).
+<br>Tampilan visual container diatur menggunakan BoxDecoration, yang terdiri dari beberapa elemen berikut :
+
+  - Gradasi Warna (LinearGradient); Background container menggunakan efek gradasi warna melalui LinearGradient, yaitu perpaduan warna dari biru tua (Colors.indigo) menuju biru muda (Colors.lightBlue). Efek ini membuat tampilan container terlihat lebih modern dan tidak monoton.
+  - Sudut Melengkung (borderRadius); Properti borderRadius: BorderRadius.circular(24) digunakan untuk membuat sudut container menjadi melengkung dengan radius sebesar 24 pixel. Hal ini memberikan kesan lebih halus dan elegan dibandingkan sudut kotak biasa.
+  - Efek Bayangan (boxShadow); Container juga diberikan efek bayangan menggunakan BoxShadow. Bayangan berwarna Colors.indigo dengan tingkat blur (blurRadius) sebesar 12 dan posisi bayangan sedikit bergeser ke bawah menggunakan offset: Offset(0, 6). Efek ini membuat container terlihat lebih hidup dan memiliki dimensi seperti kartu (card).
+
 3. Isi Container (child)
-Seluruh isi container dibungkus menggunakan widget Center, sehingga seluruh komponen di dalamnya berada tepat di tengah container, baik secara horizontal maupun vertikal.
+<br>eluruh isi container dibungkus menggunakan widget Center, sehingga seluruh komponen di dalamnya berada tepat di tengah container, baik secara horizontal maupun vertikal.
+
 4. Pengaturan Layout Menggunakan Column
-Di dalam Center, digunakan widget Column dengan properti mainAxisAlignment: MainAxisAlignment.center. Pengaturan ini membuat seluruh elemen tersusun secara vertikal dari atas ke bawah dan posisinya tetap berada di tengah container.
+<br>Di dalam Center, digunakan widget Column dengan properti mainAxisAlignment: MainAxisAlignment.center. Pengaturan ini membuat seluruh elemen tersusun secara vertikal dari atas ke bawah dan posisinya tetap berada di tengah container.
+
 5. Komponen yang Ditampilkan
-Beberapa widget yang terdapat di dalam Column antara lain:
-- Icon; Widget Icon(Icons.computer) digunakan untuk menampilkan ikon komputer dengan warna putih (Colors.white) dan ukuran (size) sebesar 38.
-- SizedBox; Widget SizedBox(height: 8) dan SizedBox(height: 4) digunakan sebagai pemberi jarak antar elemen agar tampilan tidak terlalu rapat dan terlihat lebih rapi.
-- Text Nama; Widget Text pertama digunakan untuk menampilkan nama “Muhammad Dhimas Hafizh Fathurrahman”. Teks ditampilkan rata tengah (textAlign: TextAlign.center), berwarna putih, memiliki ukuran font 19, serta menggunakan fontWeight.bold agar terlihat lebih tegas dan menonjol.
-- Text NIM; Widget Text kedua digunakan untuk menampilkan NIM “2311102151” dengan ukuran font 15 dan warna Colors.white70, sehingga tampil sedikit lebih transparan dibandingkan teks nama.
+<br>Beberapa widget yang terdapat di dalam Column antara lain:
+
+  - Icon; Widget Icon(Icons.computer) digunakan untuk menampilkan ikon komputer dengan warna putih (Colors.white) dan ukuran (size) sebesar 38.
+  - SizedBox; Widget SizedBox(height: 8) dan SizedBox(height: 4) digunakan sebagai pemberi jarak antar elemen agar tampilan tidak terlalu rapat dan terlihat lebih rapi.
+  - Text Nama; Widget Text pertama digunakan untuk menampilkan nama “Muhammad Dhimas Hafizh Fathurrahman”. Teks ditampilkan rata tengah (textAlign: TextAlign.center), berwarna putih, memiliki ukuran font 19, serta menggunakan fontWeight.bold agar terlihat lebih tegas dan menonjol.
+  - Text NIM; Widget Text kedua digunakan untuk menampilkan NIM “2311102151” dengan ukuran font 15 dan warna Colors.white70, sehingga tampil sedikit lebih transparan dibandingkan teks nama.
 
 #### 2. GridView
 GridView merupakan widget pada Flutter yang digunakan untuk menampilkan data dalam bentuk grid atau kisi-kisi (baris dan kolom). Widget ini sangat cocok digunakan untuk menampilkan menu layanan, kategori, galeri foto, maupun daftar produk. Pada kode main.dart, digunakan GridView.builder karena lebih efisien dalam me-render data secara dinamis dari sebuah list atau array (gridItems).
