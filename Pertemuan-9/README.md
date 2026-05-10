@@ -404,9 +404,9 @@ Berikut penjelasan Widget Container yang digunakan pada main.dart :
 2. Dekorasi Container (decoration: BoxDecoration)
 <br>Tampilan visual container diatur menggunakan BoxDecoration, yang terdiri dari beberapa elemen berikut :
 
-  - Gradasi Warna (LinearGradient); Background container menggunakan efek gradasi warna melalui LinearGradient, yaitu perpaduan warna dari biru tua (Colors.indigo) menuju biru muda (Colors.lightBlue). Efek ini membuat tampilan container terlihat lebih modern dan tidak monoton.
-  - Sudut Melengkung (borderRadius); Properti borderRadius: BorderRadius.circular(24) digunakan untuk membuat sudut container menjadi melengkung dengan radius sebesar 24 pixel. Hal ini memberikan kesan lebih halus dan elegan dibandingkan sudut kotak biasa.
-  - Efek Bayangan (boxShadow); Container juga diberikan efek bayangan menggunakan BoxShadow. Bayangan berwarna Colors.indigo dengan tingkat blur (blurRadius) sebesar 12 dan posisi bayangan sedikit bergeser ke bawah menggunakan offset: Offset(0, 6). Efek ini membuat container terlihat lebih hidup dan memiliki dimensi seperti kartu (card).
+    - Gradasi Warna (LinearGradient); Background container menggunakan efek gradasi warna melalui LinearGradient, yaitu perpaduan warna dari biru tua (Colors.indigo) menuju biru muda (Colors.lightBlue). Efek ini membuat tampilan container terlihat lebih modern dan tidak monoton.
+    - Sudut Melengkung (borderRadius); Properti borderRadius: BorderRadius.circular(24) digunakan untuk membuat sudut container menjadi melengkung dengan radius sebesar 24 pixel. Hal ini memberikan kesan lebih halus dan elegan dibandingkan sudut kotak biasa.
+    - Efek Bayangan (boxShadow); Container juga diberikan efek bayangan menggunakan BoxShadow. Bayangan berwarna Colors.indigo dengan tingkat blur (blurRadius) sebesar 12 dan posisi bayangan sedikit bergeser ke bawah menggunakan offset: Offset(0, 6). Efek ini membuat container terlihat lebih hidup dan memiliki dimensi seperti kartu (card).
 
 3. Isi Container (child)
 <br>eluruh isi container dibungkus menggunakan widget Center, sehingga seluruh komponen di dalamnya berada tepat di tengah container, baik secara horizontal maupun vertikal.
