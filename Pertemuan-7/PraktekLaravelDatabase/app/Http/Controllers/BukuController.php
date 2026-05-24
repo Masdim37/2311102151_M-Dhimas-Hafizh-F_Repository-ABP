@@ -11,6 +11,10 @@ class BukuController extends Controller
     public function index()
     {
         $data = Buku::all();
+        if (request()->segment(1) == 'api') return response()->json([
+            'error' => false,
+            'list' => $data
+        ]);
         return view('buku.index', compact('data'));
     }
 
@@ -50,6 +54,10 @@ class BukuController extends Controller
     public function edit($id)
     {
         $buku = Buku::findOrFail($id);
+        if (request()->segment(1) == 'api') return response()->json([
+            'error' => false,
+            'list' => $buku
+        ]);
         return view('buku.edit', compact('buku'));
     }
 
