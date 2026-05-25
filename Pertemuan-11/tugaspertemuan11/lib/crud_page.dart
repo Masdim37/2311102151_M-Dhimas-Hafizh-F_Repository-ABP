@@ -36,7 +36,7 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
   DateTime? _tglLahirTerpilih;
   bool _genderTerpilih = true;
 
-  // FUNGSI UTAMA: Memunculkan Notifikasi & Mencatat ke Riwayat Log
+  //Memunculkan Notifikasi & Mencatat ke Riwayat Log
   Future<void> _tampilkanNotifikasi(String judul, String pesan) async {
     const AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
@@ -49,29 +49,27 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
       android: androidDetails,
     );
 
-    // 1. Tembakkan notifikasi ke sistem bar Android
+    //Tembakkan notifikasi ke sistem bar Android
     await flutterLocalNotificationsPlugin.show(
-      id:
-          DateTime.now().millisecondsSinceEpoch ~/
-          1000, // ID unik berbasis waktu
+      id: DateTime.now().millisecondsSinceEpoch ~/ 1000,
       title: judul,
       body: pesan,
       notificationDetails: platformDetails,
     );
 
-    // 2. Tambahkan ke Log Riwayat (Menu Kedua)
+    //Tambahkan ke Log Riwayat
     String waktu =
         "${DateTime.now().hour.toString().padLeft(2, '0')}:${DateTime.now().minute.toString().padLeft(2, '0')}";
     logNotifikasi.insert(
       0,
       "[$waktu] $judul: $pesan",
-    ); // Menyisipkan log baru di urutan paling atas
+    ); //menyisipkan log baru di urutan paling atas
   }
 
-  // DIALOG FORM (Mendukung Tambah & Edit Data)
+  //Dialog Form (Tambah & Edit Data)
   void _tampilFormDialog({int? index}) {
     if (index != null) {
-      // MODE EDIT: Isi form dengan data lama yang dipilih
+      //Mode Edit: Isi form dengan data lama yang dipilih
       _namaController.text = widget.data[index].nama;
       _nimController.text = widget.data[index].nim;
       _ipkController.text = widget.data[index].ipk.toString();
@@ -79,7 +77,6 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
       _tglLahirTerpilih = widget.data[index].tgllahir;
       _genderTerpilih = widget.data[index].gender;
 
-      // SOLUSI: Mengarahkan kursor ke akhir karakter (Bukan nge-blok)
       _namaController.selection = TextSelection.fromPosition(
         TextPosition(offset: _namaController.text.length),
       );
@@ -90,7 +87,7 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
         TextPosition(offset: _ipkController.text.length),
       );
     } else {
-      // MODE CREATE: Kosongkan Form
+      //MODE CREATE: Kosongkan Form
       _namaController.clear();
       _nimController.clear();
       _ipkController.clear();
@@ -220,14 +217,14 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
                     );
 
                     if (index == null) {
-                      // AKSI: CREATE DATA
+                      //notifikasi ketika Create Data
                       widget.data.add(mhsBaru);
                       _tampilkanNotifikasi(
                         "Data Berhasil Ditambah!",
                         "Mahasiswa ${_namaController.text} ditambahkan.",
                       );
                     } else {
-                      // AKSI: EDIT / UPDATE DATA
+                      //notifikasi ketika Edit/Update Data
                       widget.data[index] = mhsBaru;
                       _tampilkanNotifikasi(
                         "Data Berhasil Diperbarui!",
@@ -246,20 +243,20 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
     );
   }
 
-  // FUNGSI AKSI: DELETE (HAPUS DATA)
+  //Dialog Form (Delete Data)
   void _hapusData(int index) {
     String namaDihapus = widget.data[index].nama;
     setState(() {
       widget.data.removeAt(index);
     });
-    // Pemicu Notifikasi saat data didelete
+    //notifikasi ketika delete Data
     _tampilkanNotifikasi(
       "Data Dihapus",
       "Data mahasiswa bernama $namaDihapus dihapus dari sistem.",
     );
   }
 
-  // FUNGSI BARU: Dialog Konfirmasi Sebelum Hapus
+  //Function Dialog Konfirmasi Sebelum Hapus
   void _konfirmasiHapus(int index) {
     showDialog(
       context: context,
@@ -275,17 +272,17 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
           'Apakah Anda yakin ingin menghapus data dari mahasiswa bernama ${widget.data[index].nama}?',
         ),
         actions: [
-          // Pilihan 1: Batal (Tutup dialog tanpa menghapus)
+          //pilihan 1: Batal (Tutup dialog tanpa menghapus)
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: const Text('Batal'),
           ),
-          // Pilihan 2: Ya (Tutup dialog lalu jalankan proses hapus)
+          //pilihan 2: Ya (Tutup dialog lalu jalankan proses hapus)
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
             onPressed: () {
-              Navigator.pop(context); // Tutup dialog konfirmasi terlebih dahulu
-              _hapusData(index); // Jalankan fungsi hapus data & notifikasi
+              Navigator.pop(context); //tutup dialog konfirmasi terlebih dahulu
+              _hapusData(index); //jalankan fungsi hapus data & notifikasi
             },
             child: const Text(
               'Ya, Hapus',
@@ -328,7 +325,7 @@ class _CrudMahasiswaPageState extends State<CrudMahasiswaPage> {
                     onTap: () {
                       Navigator.pushNamed(context, '/detail', arguments: mhs);
                     },
-                    // MENAMPILKAN TOMBOL EDIT & DELETE DI KANAN
+                    //menampilkan tombol edit & delete
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [

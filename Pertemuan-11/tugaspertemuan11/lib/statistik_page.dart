@@ -10,10 +10,8 @@ class StatistikPage extends StatefulWidget {
 }
 
 class _StatistikPageState extends State<StatistikPage> {
-  // Variabel state untuk menyimpan jurusan yang sedang dipilih
   String? _selectedJurusan;
 
-  // Daftar jurusan yang sama dengan yang ada di crud_page.dart
   final List<String> _daftarJurusan = [
     'Teknik Informatika',
     'Sistem Informasi',
@@ -32,27 +30,32 @@ class _StatistikPageState extends State<StatistikPage> {
   @override
   void initState() {
     super.initState();
-    // Mengeset default pilihan pertama (Informatika) saat halaman dibuka
     _selectedJurusan = _daftarJurusan[0];
   }
 
   @override
   Widget build(BuildContext context) {
-    // 1. DATA GLOBAL (Semua Jurusan)
-    int totalGlobal = widget.data.length;
-    double rataIpkGlobal = totalGlobal == 0
+    //Mengambil data global (Data mahasiswa dari semua jurusan)
+    int totalGlobal = widget.data.length; //data total mahasiswa
+    double rataIpkGlobal =
+        totalGlobal ==
+            0 //data rata-rata IPK
         ? 0
         : widget.data.map((m) => m.ipk).reduce((a, b) => a + b) / totalGlobal;
 
-    // 2. DATA FILTER (Sesuai Dropdown)
+    //mengambil data sesuai filter jurusan yang dipilih
     List<Mahasiswa> dataFilter = widget.data
         .where((m) => m.jurusan == _selectedJurusan)
         .toList();
 
-    int totalFilter = dataFilter.length;
-    int lakiLaki = dataFilter.where((m) => m.gender).length;
-    int perempuan = totalFilter - lakiLaki;
-    double rataIpkFilter = totalFilter == 0
+    int totalFilter = dataFilter.length; //data jumlah mahasiswa
+    int lakiLaki = dataFilter
+        .where((m) => m.gender)
+        .length; //data jumlah mahasiswa laki-laki
+    int perempuan = totalFilter - lakiLaki; //data jumlah mahasiswa perempuan
+    double rataIpkFilter =
+        totalFilter ==
+            0 //data rata-rata IPK
         ? 0
         : dataFilter.map((m) => m.ipk).reduce((a, b) => a + b) / totalFilter;
 
@@ -69,7 +72,7 @@ class _StatistikPageState extends State<StatistikPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // BAGIAN RINGKASAN GLOBAL
+            //bagian ringkasan data global
             const Text(
               "Ringkasan Global",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -96,7 +99,7 @@ class _StatistikPageState extends State<StatistikPage> {
             ),
             const Divider(height: 40),
 
-            // BAGIAN FILTER JURUSAN
+            //bagian data sesuai filter jurusan
             const Text(
               "Filter Program Studi",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -142,86 +145,10 @@ class _StatistikPageState extends State<StatistikPage> {
           ],
         ),
       ),
-
-      // body: Padding(
-      //   padding: const EdgeInsets.all(16.0),
-      //   child: Column(
-      //     // children: [
-      //     // _buildStatCard(
-      //     //   "Total Mahasiswa",
-      //     //   "$total",
-      //     //   Icons.group,
-      //     //   Colors.blue,
-      //     // ),
-      //     // _buildStatCard(
-      //     //   "Rata-rata IPK",
-      //     //   rataIpk.toStringAsFixed(2),
-      //     //   Icons.school,
-      //     //   Colors.orange,
-      //     // ),
-      //     // ],
-      //     children: [
-      //       // 1. WIDGET DROPDOWN PEMILIHAN JURUSAN (Materi Modul 6)
-      //       DropdownButtonFormField<String>(
-      //         value: _selectedJurusan,
-      //         decoration: const InputDecoration(
-      //           labelText: 'Filter Berdasarkan Jurusan',
-      //           border: OutlineInputBorder(),
-      //           prefixIcon: Icon(Icons.category),
-      //         ),
-      //         items: _daftarJurusan
-      //             .map((j) => DropdownMenuItem(value: j, child: Text(j)))
-      //             .toList(),
-      //         onChanged: (val) {
-      //           setState(() {
-      //             _selectedJurusan =
-      //                 val; // Memicu rebuild data statistik di bawah
-      //           });
-      //         },
-      //       ),
-      //       const SizedBox(height: 25),
-
-      //       Text(
-      //         "Persebaran Data Jurusan $_selectedJurusan:",
-      //         style: const TextStyle(
-      //           fontSize: 15,
-      //           fontWeight: FontWeight.bold,
-      //           color: Colors.grey,
-      //         ),
-      //       ),
-      //       const SizedBox(height: 10),
-
-      //       // 2. DAFTAR KARTU INFORMASI SEBARAN DATA (Materi Modul 7 - Model Processing)
-      //       _buildStatCard(
-      //         "Total Mahasiswa",
-      //         "$total",
-      //         Icons.group,
-      //         Colors.blue,
-      //       ),
-      //       _buildStatCard(
-      //         "Laki-laki",
-      //         "$lakiLaki",
-      //         Icons.male,
-      //         Colors.lightBlue,
-      //       ),
-      //       _buildStatCard(
-      //         "Perempuan",
-      //         "$perempuan",
-      //         Icons.female,
-      //         Colors.pink,
-      //       ),
-      //       _buildStatCard(
-      //         "Rata-rata IPK",
-      //         rataIpk.toStringAsFixed(2),
-      //         Icons.school,
-      //         Colors.orange,
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 
+  //widget untuk data sesuai filter jurusan
   Widget _buildStatCard(
     String title,
     String value,
@@ -229,9 +156,7 @@ class _StatistikPageState extends State<StatistikPage> {
     Color color,
   ) {
     return Card(
-      margin: const EdgeInsets.symmetric(
-        vertical: 6,
-      ), // Menambahkan jarak antar card
+      margin: const EdgeInsets.symmetric(vertical: 6),
       child: ListTile(
         leading: Icon(icon, color: color, size: 40),
         title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
@@ -243,7 +168,7 @@ class _StatistikPageState extends State<StatistikPage> {
     );
   }
 
-  // Tambahan: Widget khusus untuk kartu kecil di bagian atas (Ringkasan Global)
+  //widget kecil untuk data global
   Widget _buildStatCardSmall(
     String title,
     String value,

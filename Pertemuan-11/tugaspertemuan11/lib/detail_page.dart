@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'model_mahasiswa.dart'; // Import model
+import 'model_mahasiswa.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Menangkap data (object) yang dikirim melalui argumen rute
+    //menangkap data (object) yang dikirim melalui argumen rute
     final Mahasiswa mhs =
         ModalRoute.of(context)!.settings.arguments as Mahasiswa;
 
-    // Logika mengubah boolean gender menjadi teks
+    //mengubah boolean gender menjadi teks
     String genderTeks = mhs.gender ? "Laki-laki" : "Perempuan";
-    // Format tanggal lahir sederhana
+    //format tanggal lahir
     String tglLahirTeks =
         "${mhs.tgllahir.day}-${mhs.tgllahir.month}-${mhs.tgllahir.year}";
 
@@ -32,13 +32,8 @@ class DetailPage extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min, // Sesuaikan tinggi dengan isi
+              mainAxisSize: MainAxisSize.min,
               children: [
-                // const Text(
-                //   "Informasi Lengkap",
-                //   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                // ),
-                // const Divider(),
                 const SizedBox(height: 10),
                 Text(
                   'Nama Mahasiswa : ${mhs.nama}',

@@ -5,11 +5,12 @@ import 'detail_page.dart';
 import 'model_mahasiswa.dart';
 import 'statistik_page.dart';
 
-// Variabel Global yang dapat diakses oleh file lain (crud_page.dart)
+//Deklarasi Variabel Global yang dapat diakses oleh file lain
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
-final List<String> logNotifikasi = []; // List penyimpan log riwayat aktivitas
-final List<Mahasiswa> dataMahasiswa = []; //NAMBAH INI
+final List<String> logNotifikasi = []; //List penyimpan log riwayat aktivitas
+final List<Mahasiswa> dataMahasiswa =
+    []; //List dataMahasiswa untuk menyimpan data mahasiswa
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
+        //routing halaman
         '/': (context) => const MainNavigation(),
         '/detail': (context) => const DetailPage(),
       },
@@ -60,17 +62,20 @@ class _MainNavigationState extends State<MainNavigation> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          CrudMahasiswaPage(data: dataMahasiswa), // Kirim data ke sini
+          CrudMahasiswaPage(
+            data: dataMahasiswa,
+          ), //kirim dataMahasiswa ke halaman crud
           RiwayatLogPage(),
-          StatistikPage(data: dataMahasiswa), // Kirim data ke sini
+          StatistikPage(
+            data: dataMahasiswa,
+          ), //kirim dataMahasiswa ke halaman statistik
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (index) {
           setState(() {
-            _selectedIndex =
-                index; // Pemicu rebuild MainNavigation saat tab diklik
+            _selectedIndex = index;
           });
         },
         items: const [
@@ -89,9 +94,7 @@ class _MainNavigationState extends State<MainNavigation> {
   }
 }
 
-// =======================================================
-// WIDGET HALAMAN MENU KEDUA: LOG RIWAYAT NOTIFIKASI
-// =======================================================
+//WIDGET HALAMAN MENU KEDUA: LOG RIWAYAT NOTIFIKASI
 class RiwayatLogPage extends StatelessWidget {
   const RiwayatLogPage({super.key});
 

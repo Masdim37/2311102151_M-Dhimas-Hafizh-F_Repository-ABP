@@ -2,9 +2,9 @@ class Mahasiswa {
   String nama;
   String nim;
   String jurusan;
-  double ipk; // Di Dart, tipe bilangan desimal (Float) menggunakan double
+  double ipk; 
   DateTime tgllahir;
-  bool gender; // true = Laki-laki, false = Perempuan
+  bool gender;
 
   Mahasiswa({
     required this.nama,
